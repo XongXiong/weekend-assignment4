@@ -2,9 +2,15 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('MainController', function ($http) {
     var mc = this;
-    var picture = pictures
-    mc.pictures = picture;
     
+    mc.pictures = [];
+    
+    $http.get('/pictures').then(function(response) {
+        console.log(response);
+        mc.pictures = response.data;
+        
+    })
+
     mc.addLike = function(picture) {
         picture.likeCounter += 1;
         console.log(picture.likeCounter);

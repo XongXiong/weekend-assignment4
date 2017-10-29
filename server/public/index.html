@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="vendors/angular.js"></script>
-    <script src="script/pictures.js"></script>
     <script src="script/client.js"></script>
     <title>Document</title>
 </head>
@@ -22,7 +21,8 @@
                 <div class="pictureFact" ng-mouseleave="mc.picShow(picture)" ng-show="picture.showFact">{{picture.fact}}</div>
                 <img ng-src="images/pic{{picture.picNum}}.jpg" ng-mouseenter="mc.picShow(picture); mc.addView(picture)" ng-show="picture.showPic">
             </div>
-<button class="likeBtn" type="button" ng-click="mc.addLike(picture)"> &#128525: {{picture.likeCounter}} &#128064: {{picture.viewCounter}}</button>
+<button class="likeBtn btn-primary" type="button" ng-click="mc.addLike(picture)">Love This!</button>
+<div class="stats">&#128525: {{picture.likeCounter}} &#128064: {{picture.viewCounter}}</div>
         </span>
         
     </div>
