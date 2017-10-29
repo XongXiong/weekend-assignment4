@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="vendors/angular.js"></script>
+    <script src="script/pictures.js"></script>
+    <script src="script/client.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+<div ng-controller="MainController as mc">
+<span ng-repeat="picture in mc.pictures" class=" col-sm-5 col-md-4">
+<div class="imgSect">
+<div class="pictureFact" ng-mouseleave="mc.picShow(picture)" ng-show="picture.showFact">{{picture.fact}}</div>
+<img ng-src="images/pic{{picture.picNum}}.jpg" ng-mouseenter="mc.picShow(picture); mc.addView(picture)" ng-show="picture.showPic">
+    </div>
+    <button class="likeBtn" type="button" ng-click="mc.addLike(picture)">Likes: {{picture.likeCounter}} Views: {{picture.viewCounter}}</button>
+</span>
+    </div>
+</body>
+</html>
