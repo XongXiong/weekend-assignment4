@@ -18,11 +18,10 @@
     align-items: center;
 }
 
-#pictureDisp, .imgSect {
+.imgSect {
     width: 320px;
     user-select: none;
 }
-
 
 body {
     background-color: rgba(70, 50, 1, 0.863)
@@ -32,13 +31,16 @@ h1 {
     font-size: 72px;
     color: white;
     text-align: center;
+    font-weight: bold;
 }
 
 .col-xs-4 {
-    width: 320px;
+    width: 300px;
 }
 
-.container-fluid {
-    float: none;
+.galSect {
+    /* display: flex;
+    justify-content: center; */
+    float: center;
     margin: 0 auto;
 }
