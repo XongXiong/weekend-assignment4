@@ -16,7 +16,6 @@
 <body ng-app="myApp">
     <h1>Xong's Photo Gallery</h1>
     <div ng-controller="MainController as mc" class="container-fluid">
-        <div class="row">
         <span ng-repeat="picture in mc.pictures" class="col-xs-4 col-sm-5 col-md-4 galSect">
             <div class="imgSect">
                 <div class="pictureFact" ng-mouseleave="mc.picShow(picture)" ng-show="picture.showFact">{{picture.fact}}</div>
@@ -24,7 +23,7 @@
             </div>
 <button class="likeBtn" type="button" ng-click="mc.addLike(picture)"> &#128525: {{picture.likeCounter}} &#128064: {{picture.viewCounter}}</button>
         </span>
-        </div>
+        
     </div>
 </body>
 

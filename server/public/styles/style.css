@@ -39,8 +39,9 @@ h1 {
 }
 
 .galSect {
-    /* display: flex;
-    justify-content: center; */
-    float: center;
-    margin: 0 auto;
+  margin: 5px;
 }
+
+/* .container-fluid {
+    background-color: skyblue;
+} */

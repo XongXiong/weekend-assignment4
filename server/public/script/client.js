@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('MainController', function () {
+myApp.controller('MainController', function ($http) {
     var mc = this;
     var picture = pictures
     mc.pictures = picture;
