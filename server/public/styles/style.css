@@ -27,3 +27,18 @@
 body {
     background-color: rgba(70, 50, 1, 0.863)
 }
+
+h1 {
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+
+.col-xs-4 {
+    width: 320px;
+}
+
+.container-fluid {
+    float: none;
+    margin: 0 auto;
+}
