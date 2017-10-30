@@ -18,7 +18,7 @@
     <div ng-controller="MainController as mc">
         <span ng-repeat="picture in mc.pictures" class="container col-xs-4 col-sm-5 col-md-4 galSect">
             <div class="imgSect">
-                <div class="pictureFact" ng-mouseleave="mc.picShow(picture)" ng-show="picture.showFact">{{picture.fact}}</div>
+                <div class="pictureDesc" ng-mouseleave="mc.picShow(picture)" ng-show="picture.showDesc">{{picture.desc}}</div>
                 <img ng-src="images/pic{{picture.picNum}}.jpg" ng-mouseenter="mc.picShow(picture); mc.addView(picture)" ng-show="picture.showPic">
             </div>
             <button class="likeBtn btn-primary" type="button" ng-click="mc.addLike(picture)">Love This!</button>
