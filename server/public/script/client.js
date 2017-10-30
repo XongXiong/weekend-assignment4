@@ -4,9 +4,13 @@ myApp.controller('MainController', function ($http) {
     var mc = this;
     
     mc.pictures = [];
+
+    mc.showComment = function (picture) {
+        picture.showComm = !picture.showComm;
+    }
     
     $http.get('/pictures').then(function(response) {
-        console.log(response);
+        console.log(response.data);
         mc.pictures = response.data;
         
     })
